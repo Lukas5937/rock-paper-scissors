@@ -1,8 +1,19 @@
-const elements = ["Rock", "Paper", "Scissor"];
+const elements = ["Rock", "Paper", "Scissors"];
 
 function getComputerChoice() {
     let computerChoice = elements[Math.floor(Math.random() * elements.length)];
-     return computerChoice
+     return computerChoice;
 }
 
-console.log(getComputerChoice())
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === "Rock" && computerSelection === "Paper" ||
+        playerSelection === "Paper" && computerSelection === "Scissors" ||
+        playerSelection === "Scissors" && computerSelection === "Rock") {
+        return `You Lose! ${computerSelection} beats ${playerSelection}`;
+    }
+    else if (playerSelection === "Rock" && computerSelection === "Scissors" ||
+    playerSelection === "Paper" && computerSelection === "Rock" ||
+    playerSelection === "Scissors" && computerSelection === "Paper") {
+    return `You Win! ${playerSelection} beats ${computerSelection}`;
+}
+}
