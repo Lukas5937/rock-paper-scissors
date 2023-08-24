@@ -25,7 +25,10 @@ let computerSelection = getComputerChoice()
 /* console.log(playRound("Paper", computerSelection)) */
 
 function game() {
-    playerSelection = "Paper"
+    playerSelection = prompt("Make a choice (Rock, paper or scissors).");
+    firstLetter = (playerSelection.charAt(0)).toUpperCase();
+    remainingLetters = playerSelection.slice(1);
+    playerSelection = firstLetter + remainingLetters;
     firstRound = playRound(playerSelection, computerSelection);
     if (firstRound === true) {
         console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
