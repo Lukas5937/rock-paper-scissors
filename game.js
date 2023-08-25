@@ -24,7 +24,7 @@ let computerSelection = getComputerChoice()
 
 /* console.log(playRound("Paper", computerSelection)) */
 
-function game() {
+function playGame() {
     playerSelection = prompt("Make a choice (Rock, paper or scissors).");
     firstLetter = (playerSelection.charAt(0)).toUpperCase();
     remainingLetters = playerSelection.slice(1);
@@ -45,7 +45,7 @@ function game() {
     console.log(`Score Computer: ${scoreComputer}`)
 }
 
-function resultMessage () {
+function showResultMessage () {
     if (scoreComputer < scorePlayer) {
         console.log("You won!! Congratulations!");
     }
@@ -57,15 +57,15 @@ function resultMessage () {
     }
 }
 
-game()
+playGame()
 computerSelection = getComputerChoice()
-game()
+playGame()
 computerSelection = getComputerChoice()
-game()
+playGame()
 computerSelection = getComputerChoice()
-game()
+playGame()
 computerSelection = getComputerChoice()
-game()
+playGame()
 computerSelection = getComputerChoice()
 
-resultMessage()
+showResultMessage()
